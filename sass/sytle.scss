@@ -625,11 +625,76 @@ html, body, p, ul, li, a, button {
     // overflow:
     height: 740px;
     width: 100%;
-    display: flex;
+    display: block;
 
-    .slider-view {
-      
+    .main-slide {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      float: left;
+      img {
+        display: block;
+        margin: auto;
+        width: 90%;
+        height: auto;
+      }
     }
+    .slides-menu {
+      display: block;
+      width: 40%;
+      height: 100%;
+      position: relative;
+      float: left;
+      .slide {
+        position: absolute;
+        left:50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        height: 200px;
+        img {
+          width: auto;
+          height: 100%;
+        }
+
+
+      }
+    }
+
+
+    /*
+Первичные стили:
+С ними работает слайд шоу
+*/
+
+    // #slides {
+    //     position: relative;
+    //     height: 300px;
+    //     padding: 0px;
+    //     margin: 0px;
+    //     list-style-type: none;
+    // }
+    //
+    // .slide {
+    //     position: absolute;
+    //     left: 0px;
+    //     top: 0px;
+    //     width: 100%;
+    //     height: 100%;
+    //     opacity: 0;
+    //     z-index: 1;
+    //
+    //     -webkit-transition: opacity 1s;
+    //     -moz-transition: opacity 1s;
+    //     -o-transition: opacity 1s;
+    //     transition: opacity 1s;
+    // }
+    //
+    // .showing {
+    //     opacity: 1;
+    //     z-index: 2;
+    // }
+
 
   }
 
