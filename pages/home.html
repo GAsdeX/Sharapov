@@ -1,39 +1,40 @@
-<div class="">
-  <div class="section-1">
+<div >
+
+	<div class="section-1">
     <div class="background">
       <img src="" alt="">
     </div>
     <div class="container">
-      <div class="site-top" id='nav-bar'>
-        <div class="top-bar">
-          <div class="logo">
-          </div>
-          <div class="nav-bar">
-            <ul>
-              <li>
-                <p>
-                  Раздел
-                </p>
-              </li>
-              <li>
-                <p>
-                  Раздел
-                </p>
-              </li>
-              <li>
-                <p>
-                  Раздел
-                </p>
-              </li>
-              <li>
-                <p>
-                  Раздел
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+			<div class="site-top" id='nav-bar'>
+				<div class="top-bar">
+					<div class="logo">
+					</div>
+					<div class="nav-bar">
+						<ul>
+							<li>
+								<p>
+									Раздел
+								</p>
+							</li>
+							<li>
+								<p>
+									Раздел
+								</p>
+							</li>
+							<li>
+								<p>
+									Раздел
+								</p>
+							</li>
+							<li>
+								<p>
+									Раздел
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
       <div class="person-presentation">
         <div class="name">Игорь</div>
         <div class="last-name">Шарапов</div>
@@ -59,7 +60,8 @@
       </div>
     </div>
   </div>
-  <div class="section-2">
+
+	<div class="section-2">
 
     <div class="container">
 
@@ -71,76 +73,24 @@
       <div class="overlay" id='overlay' ng-click='goToMain()' ng-show="operationDescription">
 
       </div>
-      <div class="operation-view "  ng-show="operationDescription">
-        <div class="container" >
-          <div class="left-bar">
-            <div class="top-bar">
-              <div class="avatar">
-                <img src="img/boobs.jpg" alt="">
-              </div>
-            </div>
-            <div class="bottom-bar">
-              <div class="contacts-bar" id='l1'>
-                <div class="title">
-                  <p>Записаться на консультацию</p>
-                </div>
-                <div class="manipulation">
-                  <div class="input-wrapper">
-                    <img src="img/user-name.png" alt="">
-                    <input type="text" placeholder='Имя' name="" value="">
-                  </div>
-                  <div class="input-wrapper">
-                    <img src="img/mobile-phone.png" alt="">
-                    <input type="text" placeholder='Телефон' name="" value="">
-                  </div>
-                  <div class="input-wrapper">
-                    <img src="img/e-mail-envelope.png" alt="">
-                    <input type="text" placeholder='E-mail' name="" value="">
-                  </div>
-                  <div class="input-wrapper">
-                    <button type="button" name="button"  id="go-to-text">далее</button>
-                  </div>
-                </div>
-              </div>
 
-              <div class="message-bar" id='l2'>
-                <div class="title">
-                  <p>Оставить сообщение</p>
-                </div>
-
-                <div class="input-wrapper">
-                  <img src="img/chat.png" alt="">
-                  <textarea name="name" rows="8"></textarea>
-                </div>
-                  <button type="button" ng-click="" name="button">далее</button>
-
-              </div>
-
-            </div>
-          </div>
-          <div class="right-bar">
-            <div class="title"><p>{{currentUnderSection.title}}</p></div>
-            <p class="text">{{currentUnderSection.text}}</p>
-          </div>
-        </div>
-      </div>
-
-      <ul class="sections-operations" ng-show="mainSection">
+      <ul class="sections-operations">
         <li ng-repeat="i in info">
-          <div class="card-wrapper" ng-click='openOperationDescription(i)'>
+          <a class="card-wrapper" ng-click='openOperationDescription(i)' href="#about">
             <div class="avatar">
               <img src="img/boobs.jpg" alt="">
             </div>
             <div class="subtitle">
               <p>{{i.title}}</p>
             </div>
-          </div>
+          </a>
         </li>
       </ul>
 
     </div>
   </div>
-  <div class="section-3" ng-controller="slider">
+
+	<div class="section-3" >
     <div class="container">
       <div class="top-section">
         <p>до - после</p>
@@ -160,9 +110,9 @@
 
       </div>
   </div>
-  <div class="section-4">
-    <div class="container">
-    </div>
-  </div>
+
+
+</div>
+
 
 </div>
