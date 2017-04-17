@@ -183,7 +183,6 @@ var slidesForSlider = [
   {image: "img/slider/boobs.jpg"},
   {image: "img/slider/boobs.jpg"},
   {image: "img/slider/boobs.jpg"},
-  {image: "img/slider/boobs.jpg"},
   {image: "img/slider/boobs.jpg"}
 ]
 
@@ -198,7 +197,6 @@ sharapovApp.controller('operations', function ($scope){
   $scope.showSecomdTitle = false;
   $scope.operationDescription = false;
   $scope.currentSection;
-  $scope.currentUnderSection;
 
   $scope.goToMain = function () {
     $scope.mainSection = true;
@@ -207,24 +205,18 @@ sharapovApp.controller('operations', function ($scope){
     $scope.operationDescription = false;
   }
 
-  $scope.goToSecondSection = function (e) {
-    $scope.mainSection = false;
-    $scope.secondSection = true;
-    $scope.showSecomdTitle = true;
-    $scope.operationDescription = false;
-    $scope.currentSection = e;
-  }
-
-
-  $scope.openOperationDescription = function (e) {
-    $scope.mainSection = false;
+  $scope.openOperationDescription = function (j) {
+    $scope.mainSection = true;
     $scope.secondSection = false;
-    $scope.showSecomdTitle = true;
+    $scope.showSecomdTitle = false;
     $scope.operationDescription = true;
-    $scope.currentUnderSection = e;
+    $scope.currentUnderSection = j;
+    console.log(j);
 
   }
 })
+
+
 
 sharapovApp.controller('slider', function($scope){
   $scope.slides = slidesForSlider;
@@ -233,5 +225,49 @@ sharapovApp.controller('slider', function($scope){
 })
 
 $(document).ready(function() {
-  $('.section-3 .slider-wrapper .main-slide').slick();
+  $('#slides').slick({
+    centerMode: true,
+    slidesToShow: 3,
+    focusOnSelect: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+  $('#arrow-prev').click(function(){
+    $("#slides").slick('slickPrev');
+  });
+  $('#arrow-next').click(function(){
+    $("#slides").slick('slickNext');
+  });
+  $('#go-to-text').click(function () {
+    $("#l1, #l2").addClass('active');
+  })
+  $('#overlay').click(function () {
+    $("#l1, #l2").removeClass('active');
+  })
+  $(document).scroll(function() {
+    if ($(document).scrollTop() == 0) {
+
+    }
+    // console.log($(document).scrollTop());
+  })
 })
